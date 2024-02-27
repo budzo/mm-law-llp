@@ -1,0 +1,86 @@
+body {
+    &:not(.home) {
+        padding-top: 6rem;
+        header {
+            .navbar {
+                background-color: #0A0C28 !important;
+            }
+        }
+    }
+    &.home {
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        &.home {
+            h2 {
+                font-size: 4rem;
+            }
+        }
+        &:not(.home) {
+            padding-top: 7rem;
+        }
+    }
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+.btn {
+    width: 100%;
+    max-width: 230px;
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+.body {
+    &-small {
+        font-size: .875rem;
+        list-style: 1.25rem;
+    }
+    &-medium {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    &-large {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+.page-wrapper {
+    padding: 2rem 0;
+    @include media-breakpoint-up(xl) {
+        padding: 3.5rem 0;
+    }
+}
+
+form {
+    background-color: #efefef;
+    padding: 2rem;
+    border-radius: .5rem;
+    .btn {
+        margin-right: 0 !important;
+        max-width: none;
+    }
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control {
+    border-bottom: 3px solid $secondary;
+    margin-bottom: 1rem;
+}

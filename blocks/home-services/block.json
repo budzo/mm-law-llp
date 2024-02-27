@@ -1,0 +1,21 @@
+{
+    "name": "acf/home-services",
+    "title": "Home - Services Block",
+    "description": "A custom block for Home - Services.",
+    "style": [
+        "file:./style.css"
+    ],
+    "category": "formatting",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 64 64\"><path fill=\"#9F662D\" d=\"M0 0h192v192H0z\"/></svg>",
+    "keywords": [
+        "Home",
+        "Services"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "home-services.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

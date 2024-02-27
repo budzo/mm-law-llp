@@ -1,0 +1,20 @@
+{
+    "name": "acf/buttons",
+    "title": "Buttons Block",
+    "description": "A custom block for Buttons.",
+    "style": [
+        "file:./style.css"
+    ],
+    "category": "formatting",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 64 64\"><path fill=\"#9F662D\" d=\"M0 0h192v192H0z\"/></svg>",
+    "keywords": [
+        "Buttons"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "buttons.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

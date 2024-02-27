@@ -1,0 +1,60 @@
+@import '../../scss/variables';
+
+@import '../../scss/bootstrap-overrides';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.home-services {
+    padding: 5rem 0;
+    background-color: #222;
+    &__heading {
+        h2 {
+            color: $secondary;
+            text-transform: uppercase;
+        }
+    }
+    &__copy {
+        color: $white;
+    }
+    &__wrapper {
+        &-service {
+            margin: 1.75rem 0;
+            display: block;
+            color: $white;
+            text-decoration: none;
+            position: relative;
+            transition: color .3s ease;
+            &-image {
+                img {
+                    border-radius: .5rem;
+                    border: 2px solid $secondary;
+                    transition: border-color .3s ease;
+                }
+            }
+            &-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(100% - 2rem);
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                font-weight: 500;
+            }
+            &:hover {
+                color: $secondary;
+                .home-services__wrapper-service-image img {
+                    border-color: $white;
+                }
+            }
+        }
+        &-additional-service-text {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    &__ctas {
+        margin-top: 1.5rem;
+    }
+}

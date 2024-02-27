@@ -1,0 +1,31 @@
+.hero {
+  position: relative;
+  padding: 10rem 0 6rem;
+}
+.hero__background {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.hero__content-copy {
+  margin: 2.5rem 0;
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding: 14rem 0 8rem;
+  }
+}

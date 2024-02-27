@@ -22,6 +22,17 @@ function css() {
         .pipe(browserSync.stream());
 }
 
+function block_css() {
+    return src("./blocks/**/*.scss", { sourcemaps: false })
+        .pipe(sass())
+        .pipe(prefix(prefixerOptions))
+        .pipe(dest(function(file) {
+            // Use a custom function to determine the destination dynamically
+            return file.base;
+        }, { sourcemaps: false }))
+        .pipe(browserSync.stream());
+}
+
 function js() {
     return src("./scripts/*.js", { sourcemaps: true })
         .pipe(
@@ -41,9 +52,11 @@ function browser() {
     });
 
     watch("./scss/**/*.scss", css);
+    watch("./blocks/**/*.scss", block_css);
     watch("./scripts/*.js", js).on("change", browserSync.reload);
 }
 
 exports.css = css;
+exports.block_css = block_css;
 exports.js = js;
 exports.default = browser;

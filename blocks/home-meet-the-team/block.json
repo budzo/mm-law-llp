@@ -1,0 +1,22 @@
+{
+    "name": "acf/home-meet-the-team",
+    "title": "Home - Meet The Team Block",
+    "description": "A custom block for Home - Meet The Team.",
+    "style": [
+        "file:./style.css"
+    ],
+    "category": "formatting",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 64 64\"><path fill=\"#9F662D\" d=\"M0 0h192v192H0z\"/></svg>",
+    "keywords": [
+        "Home",
+        "Meet",
+        "Team"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "home-meet-the-team.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

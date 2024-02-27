@@ -1,16 +1,25 @@
 <?php
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
+add_filter('wpcf7_form_elements', function($content) {
+  $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+  $content = str_replace('<br />', '', $content);
+
+  return $content;
+});
+add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter('wpcf7_load_js', '__return_false');
 //Loading jQuery in footer
 function jquery_enqueue() {
     wp_deregister_script('jquery');
-    // wp_register_script('jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", false, null, true);
+    // wp_register_script('jquery', "https://code.jquery.com/jquery-3.7.1.slim.min.js", false, null, true);
     // wp_enqueue_script('jquery');
 }
 if (!is_admin()) add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
 add_filter('wpcf7_autop_or_not', '__return_false');
 function google_fonts() {
-    // wp_enqueue_style( 'google-fonts-kdam-thmor-pro', 'https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap', false );
+    wp_enqueue_style( 'google-fonts-bitter', 'https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;700&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 function add_styles() {
@@ -25,13 +34,6 @@ function my_deregister_scripts() {
 }
 add_action('wp_footer', 'my_deregister_scripts');
 add_action('wp_enqueue_scripts', 'add_styles');
-
-// Remove Gutenberg Block Library CSS from loading on the frontend
-function remove_wp_block_library_css(){
-  wp_dequeue_style( 'wp-block-library' );
-  wp_dequeue_style( 'wp-block-library-theme' );
- } 
- add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
 
 // bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
@@ -111,3 +113,26 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 }
 // register a new menu
 register_nav_menu('main-menu', 'Main menu');
+register_nav_menu('footer-menu', 'Footer menu');
+register_nav_menu('legal-menu', 'Legal menu');
+
+add_action( 'init', 'register_acf_blocks', 5 );
+function register_acf_blocks() {
+    register_block_type( __DIR__ . '/blocks/hero' );
+    register_block_type( __DIR__ . '/blocks/home-services' );
+    register_block_type( __DIR__ . '/blocks/home-meet-the-team' );
+    register_block_type( __DIR__ . '/blocks/buttons' );
+}
+
+if ( ! function_exists( 'mm_law_styles' ) ) {
+	/**
+	 * Registers an editor stylesheet for the theme.
+	 */
+	function mm_law_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+		add_editor_style( 'blocks/hero/style.css' );
+    add_editor_style( 'blocks/home-services/style.css' );
+    add_editor_style( 'blocks/home-meet-the-team/style.css' );
+	}
+}
+add_action( 'admin_init', 'mm_law_styles' );

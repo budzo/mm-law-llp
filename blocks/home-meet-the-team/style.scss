@@ -1,0 +1,52 @@
+@import '../../scss/variables';
+
+@import '../../scss/bootstrap-overrides';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.home-meet-the-team {
+    padding: 5rem 0;
+    background-color: #0A0C28;
+    &__heading {
+        h2 {
+            color: $secondary;
+            text-transform: uppercase;
+        }
+    }
+    &__copy {
+        color: $white;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &-member {
+            margin: 1.75rem 2.25rem;
+            color: $white;
+            a {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                h3, h4 {
+                    transition: color .3s ease;
+                }
+                &:hover {
+                    h3 {
+                        color: $white;
+                    }
+                    h4 {
+                        color: $secondary;
+                    }
+                }
+            }
+            h3 {
+                margin-top: 1.5rem;
+                color: $secondary;
+            }
+        }
+    }
+    &__ctas {
+        margin-top: 1.5rem;
+    }
+}
