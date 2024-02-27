@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add the initial class based on the scroll position
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 128) {
+        if (window.scrollY > 112) {
             mainNav.classList.add('page-scroll');
         } else {
             mainNav.classList.remove('page-scroll');
