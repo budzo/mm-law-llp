@@ -2,13 +2,22 @@
             <div class="footerTop">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6 col-lg-4">
                             <h3>Office Hours</h3>
+                            <div class="footerTop__hours">
+                                <?php echo get_template_part('images/hours-icon'); ?> Monday: 8:30 AM - 4:30 PM<br>Tuesday: 8:30 AM - 4:30 PM<br>Wednesday: 8:30 AM - 4:30 PM<br>Thursday: 8:30 AM - 4:30 PM<br>Friday: 8:30 AM - 12 PM
+                            </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6 col-lg-4">
                             <h3>Contact Information</h3>
+                            <div class="footerTop__phone">
+                                <?php echo get_template_part('images/phone-icon'); ?> <a href="tel:9203350123">(920) 335-0123</a>
+                            </div>
+                            <div class="footerTop__address">
+                            <?php echo get_template_part('images/address-icon'); ?> <a href="https://maps.google.com/?q=366%20Main%20Avenue%20De%20Pere,%20WI%2054115" target="_blank">366 Main Avenue<br>De Pere, WI 54115</a>
+                            </div>
                         </div>
-                        <div class="col-md-4 text-md-end">
+                        <div class="col-lg-4 text-lg-end">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'footer-menu',
@@ -18,7 +27,7 @@
                                 'items_wrap' => '<ul id="%1$s" class="footerTop__nav list-unstyled %2$s">%3$s</ul>'
                             ));
                             ?>
-                            <div class="footerTop__social d-flex justify-content-end">
+                            <div class="footerTop__social d-flex justify-content-lg-end">
                                 <a href="https://facebook.com/mmlawyerswi" target="_blank">
                                     <?php echo get_template_part('images/facebook-logo'); ?>
                                 </a>

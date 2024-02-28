@@ -4,8 +4,52 @@ footer {
             padding: 3.25rem 0;
             background-color: #DABC85;
             h3 {
+                margin-bottom: 1rem;
                 color: $primary;
                 font-weight: 500;
+            }
+            &__hours,
+            &__phone,
+            &__address {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                svg {
+                    margin-top: .3rem;
+                    path {
+                        fill: $primary;
+                    }
+                }
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    &:hover {
+                        color: $primary;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &__hours {
+                line-height: 1.75rem;
+                svg {
+                    width: 20px;
+                    margin-right: .5rem;
+                }
+            }
+            &__phone {
+                svg {
+                    width: 20px;
+                    margin-right: .5rem;
+                }
+            }
+            &__address {
+                line-height: 1.75rem;
+                svg {
+                    height: 20px;
+                    margin-left: .125rem;
+                    margin-right: .625rem;
+                }
             }
             &__nav {
                 li {
