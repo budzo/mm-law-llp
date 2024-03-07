@@ -5,7 +5,7 @@ header {
             max-width: 1720px;
         }
         &.page-scroll {
-            background-color: rgba(#0A0C28, .8) !important;
+            background-color: #0A0C28 !important;
         }
         &-toggler {
             &-icon {
@@ -105,8 +105,21 @@ header {
             }
             &__nav {
                 .navbar-nav {
+                    .nav-link {
+                        padding: 1.625rem 0;
+                    }
                     .dropdown-menu {
-                        margin-top: 42px;
+                        background-color: #0A0C28;
+                        margin-top: 1rem;
+                        border: none;
+                        border-radius: 0 0 .5rem .5rem;
+                        .dropdown-item {
+                            color: $white;
+                            &:hover,
+                            &:focus {
+                                background-color: $secondary;
+                            }
+                        }
                     }
                     > .nav-item {
                         &:not(:last-child) {

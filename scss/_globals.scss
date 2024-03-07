@@ -61,8 +61,23 @@ h4 {
 
 .page-wrapper {
     padding: 2rem 0;
+    background-color: $white;
     @include media-breakpoint-up(xl) {
         padding: 3.5rem 0;
+    }
+    .page-content {
+        &__left {
+            // color: $white;
+            h1, h2, h3, h4, h5, h6 {
+                color: $primary;
+            }
+            a:not(.btn) {
+                color: #99732E;
+                &:hover {
+                    color: darken(#99732E, 10%);
+                }
+            }
+        }
     }
 }
 
