@@ -17,6 +17,10 @@
                         </a>
                     </div>
 
+                    <div class="headerRow__phone-mobile d-xl-none">
+                        <a href="tel:9203350123" role="button"><?php echo get_template_part('images/phone-icon'); ?> <span class="visually-hidden">Call us at (920) 335-0123</span></a>
+                    </div>
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
