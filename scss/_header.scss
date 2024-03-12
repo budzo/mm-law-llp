@@ -23,6 +23,7 @@ header {
     .headerRow {
         &__logo {
             a {
+                display: block;
                 svg {
                     height: 4rem;
                     path {

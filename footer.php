@@ -28,10 +28,12 @@
                             ));
                             ?>
                             <div class="footerTop__social d-flex justify-content-lg-end">
-                                <a href="https://facebook.com/mmlawyerswi" target="_blank">
+                                <a href="https://facebook.com/mmlawyerswi" target="_blank" role="button">
+                                    <span class="visually-hidden">Find us on Facebook</span>
                                     <?php echo get_template_part('images/facebook-logo'); ?>
                                 </a>
-                                <a href="https://www.linkedin.com/company/mmlawyerswi" target="_blank">
+                                <a href="https://www.linkedin.com/company/mmlawyerswi" target="_blank" role="button">
+                                    <span class="visually-hidden">Visit us on LinkedIn</span>
                                     <?php echo get_template_part('images/linkedin-logo'); ?>
                                 </a>
                             </div>

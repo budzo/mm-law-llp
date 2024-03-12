@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php if (is_front_page()) { ?>
+            <link rel="preload" fetchpriority="high" as="image" href="/wp-content/uploads/2024/02/Mask-group-1.jpg" type="image/jpg">
+        <?php } ?>
         <?php wp_head(); ?>
     </head>
 
@@ -13,6 +16,9 @@
 
                     <div class="headerRow__logo">
                         <a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
+                            <span class="visually-hidden">
+                                Go to the homepage
+                            </span>
                             <?php echo get_template_part('images/mm-logo'); ?>
                         </a>
                     </div>
@@ -45,9 +51,15 @@
 
                     <div class="headerRow__social d-none d-xxl-flex">
                         <a href="https://facebook.com/mmlawyerswi" target="_blank">
+                            <span class="visually-hidden">
+                                Find us on Facebook
+                            </span>
                             <?php echo get_template_part('images/facebook-logo'); ?>
                         </a>
                         <a href="https://www.linkedin.com/company/mmlawyerswi" target="_blank">
+                            <span class="visually-hidden">
+                                Visit us on LinkedIn
+                            </span>
                             <?php echo get_template_part('images/linkedin-logo'); ?>
                         </a>
                     </div>
