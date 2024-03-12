@@ -39,8 +39,15 @@ h4 {
 .btn {
     width: 100%;
     max-width: 230px;
-    &:not(:last-child) {
-        margin-right: 2rem;
+    + .btn {
+        @include media-breakpoint-up(sm) {
+            margin-left: 2rem;
+        }
+    }
+    &-outline {
+        &-secondary {
+            color: $white;
+        }
     }
 }
 
@@ -66,11 +73,10 @@ h4 {
         padding: 3.5rem 0;
     }
     .page-content {
+        h1, h2, h3, h4, h5, h6 {
+            color: $primary;
+        }
         &__left {
-            // color: $white;
-            h1, h2, h3, h4, h5, h6 {
-                color: $primary;
-            }
             a:not(.btn) {
                 color: #99732E;
                 &:hover {
@@ -88,6 +94,10 @@ form {
     .btn {
         margin-right: 0 !important;
         max-width: none;
+    }
+    .wpcf7-quiz-label {
+        display: inline-block;
+        @extend .form-label;
     }
 }
 

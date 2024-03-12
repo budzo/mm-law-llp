@@ -1,0 +1,65 @@
+.page-contact__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.page-contact__address svg {
+  color: #181E65;
+  height: 20px;
+  margin-top: 0.3rem;
+  margin-left: 0.125rem;
+  margin-right: 0.625rem;
+}
+.page-contact__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.page-contact__phone svg {
+  color: #181E65;
+  width: 20px;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+}
+.page-contact__hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.page-contact__hours svg {
+  color: #181E65;
+  width: 20px;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+}
+.page-contact__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page-contact__social a {
+  margin-right: 1rem;
+}
+.page-contact__social a:last-child {
+  margin-right: 0;
+}
+.page-contact__social svg {
+  width: 32px;
+}

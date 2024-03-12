@@ -28,6 +28,18 @@
         &-copy {
             margin: 2.5rem 0;
         }
+        &-ctas {
+            @include media-breakpoint-only(xs) {
+                text-align: center;
+                .btn {
+                    margin: 0 auto;
+                    display: block;
+                    + .btn {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
     }
     @include media-breakpoint-up(xl) {
         padding: 14rem 0 8rem;

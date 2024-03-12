@@ -1,0 +1,18 @@
+.page-attorneys__wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.page-attorneys__wrapper-attorney {
+  background-color: #0a0c28;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.page-attorneys__wrapper-attorney h3 {
+  margin-top: 1.5rem;
+  color: #D1AB66 !important;
+}
+.page-attorneys__wrapper-attorney .btn {
+  margin-top: 1.5rem;
+}

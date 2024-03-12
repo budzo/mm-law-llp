@@ -1,0 +1,60 @@
+@import '../../scss/variables';
+
+@import '../../scss/bootstrap-overrides';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.page-contact {
+    &__address {
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+        svg {
+            color: $primary;
+            height: 20px;
+            margin-top: .3rem;
+            margin-left: 0.125rem;
+            margin-right: 0.625rem;
+        }
+    }
+    &__phone {
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+        svg {
+            color: $primary;
+            width: 20px;
+            margin-top: .3rem;
+            margin-right: .5rem;
+        }
+    }
+    &__hours {
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+        svg {
+            color: $primary;
+            width: 20px;
+            margin-top: .3rem;
+            margin-right: .5rem;
+        }
+    }
+    &__social {
+        display: flex;
+        a {
+            margin-right: 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        svg {
+            width: 32px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "acf/page-attorneys",
+    "title": "Page - Attorneys Block",
+    "description": "A custom block for Page - Attorneys.",
+    "style": [
+        "file:./style.css"
+    ],
+    "category": "formatting",
+    "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 212 242\"><path fill=\"#181E65\" d=\"m179.436 51.476-.377.345V7.792l-5.114 5.08-68.515 68.053-67.707-68.041-5.126-5.152v44.185l-.377-.352L8.049 28.973 3 24.254v214.284h52.267V63.706l48.031 47.966 2.107 2.105 2.12-2.092 48.671-48.04v174.893H209V24.339l-5.029 4.616-24.535 22.521Zm-.377 163.854V82.573l4.323-3.593 2.694-2.239V215.33h-7.017ZM32.597 82.77v132.56h-6.865V76.876l2.485 2.134 4.38 3.76Z\"/></svg>",
+    "keywords": [
+        "Page",
+        "Attorneys"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "page-attorneys.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

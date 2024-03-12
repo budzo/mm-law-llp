@@ -121,6 +121,10 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/hero' );
     register_block_type( __DIR__ . '/blocks/home-services' );
     register_block_type( __DIR__ . '/blocks/home-meet-the-team' );
+    register_block_type( __DIR__ . '/blocks/page-services' );
+    register_block_type( __DIR__ . '/blocks/page-attorneys' );
+    register_block_type( __DIR__ . '/blocks/page-pawfessionals' );
+    register_block_type( __DIR__ . '/blocks/page-contact' );
     register_block_type( __DIR__ . '/blocks/buttons' );
 }
 
@@ -133,6 +137,10 @@ if ( ! function_exists( 'mm_law_styles' ) ) {
 		add_editor_style( 'blocks/hero/style.css' );
     add_editor_style( 'blocks/home-services/style.css' );
     add_editor_style( 'blocks/home-meet-the-team/style.css' );
+    add_editor_style( 'blocks/page-services/style.css' );
+    add_editor_style( 'blocks/page-attorneys/style.css' );
+    add_editor_style( 'blocks/page-pawfessionals/style.css' );
+    add_editor_style( 'blocks/page-contact/style.css' );
 	}
 }
 add_action( 'admin_init', 'mm_law_styles' );

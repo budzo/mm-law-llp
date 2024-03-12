@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+@import '../../scss/bootstrap-overrides';
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins/breakpoints';
+
+.page-pawfessionals {
+    &__wrapper {
+        justify-content: center;
+        &-attorney {
+            background-color: #0a0c28;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: .5rem;
+            h3 {
+                margin-top: 1.5rem;
+                color: $secondary !important;
+            }
+            .btn {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

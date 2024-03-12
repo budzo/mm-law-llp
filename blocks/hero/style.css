@@ -24,6 +24,18 @@
 .hero__content-copy {
   margin: 2.5rem 0;
 }
+@media (max-width: 575.98px) {
+  .hero__content-ctas {
+    text-align: center;
+  }
+  .hero__content-ctas .btn {
+    margin: 0 auto;
+    display: block;
+  }
+  .hero__content-ctas .btn + .btn {
+    margin-top: 1rem;
+  }
+}
 @media (min-width: 1200px) {
   .hero {
     padding: 14rem 0 8rem;
