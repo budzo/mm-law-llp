@@ -128,12 +128,15 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/buttons' );
 }
 
+add_theme_support( 'editor-styles' );
+
 if ( ! function_exists( 'mm_law_styles' ) ) {
 	/**
 	 * Registers an editor stylesheet for the theme.
 	 */
 	function mm_law_styles() {
     add_editor_style( 'custom-editor-style.css' );
+    add_editor_style( 'scss/bootstrap.css' );
 		add_editor_style( 'blocks/hero/style.css' );
     add_editor_style( 'blocks/home-services/style.css' );
     add_editor_style( 'blocks/home-meet-the-team/style.css' );
