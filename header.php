@@ -2,9 +2,6 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?php if (is_front_page()) { ?>
-            <link rel="preload" fetchpriority="high" as="image" href="/wp-content/uploads/2024/02/Mask-group-1.jpg" type="image/jpg">
-        <?php } ?>
         <?php wp_head(); ?>
     </head>
 
