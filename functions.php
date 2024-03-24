@@ -10,6 +10,20 @@ add_filter('wpcf7_form_elements', function($content) {
 });
 add_filter('wpcf7_autop_or_not', '__return_false');
 add_filter('wpcf7_load_js', '__return_false');
+function add_google_tag_manager() {
+  ?>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP3D7F33ZM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EP3D7F33ZM');
+  </script>
+  <?php
+}
+add_action('wp_head', 'add_google_tag_manager');
 //Loading jQuery in footer
 function jquery_enqueue() {
     wp_deregister_script('jquery');
