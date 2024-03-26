@@ -1,0 +1,12 @@
+@media (max-width: 575.98px) {
+  .buttonsBlock__buttons {
+    text-align: center;
+  }
+  .buttonsBlock__buttons .btn {
+    margin: 0 auto;
+    display: block;
+  }
+  .buttonsBlock__buttons .btn + .btn {
+    margin-top: 1rem;
+  }
+}
