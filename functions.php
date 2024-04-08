@@ -38,10 +38,10 @@ function google_fonts() {
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 function add_styles() {
     // wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), null);
-    wp_register_style('main-styles', get_stylesheet_directory_uri() . '/scss/style.css', array(), '', 'all');
+    wp_register_style('main-styles', get_stylesheet_directory_uri() . '/scss/style.css', array(), filemtime(get_stylesheet_directory() . '/scss/style.css'), 'all');
     wp_enqueue_style('main-styles');
     wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', false, null, true);
-    wp_enqueue_script('wp-bs5', get_stylesheet_directory_uri() . '/js/scripts.min.js', false, null, true);
+    wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/js/scripts.min.js', true, filemtime(get_stylesheet_directory() . '/js/scripts.min.js'), true);
 }
 function my_deregister_scripts() {
     wp_deregister_script( 'wp-embed' );
