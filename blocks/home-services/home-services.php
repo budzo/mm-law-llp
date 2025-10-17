@@ -36,13 +36,13 @@
                     <p class="body-medium"><?= $services_copy; ?></p>
                 </div>
                 <?php if( have_rows('services') ): ?>
-                    <div class="home-services__wrapper row">
+                    <div class="home-services__wrapper row justify-content-center">
                     <?php while( have_rows('services') ): the_row(); 
                         $background_image = get_sub_field('background_image');
                         $service_link = get_sub_field('service_link');
                         $additional_service_text = get_sub_field('additional_service_text');
                         ?>
-                        <div class="col-md-6 col-xl-3">
+                        <div class="col-md-6 col-xl-4">
                             <a class="home-services__wrapper-service" href="<?= esc_attr($service_link['url']); ?>" <?php if ($service_link['target']) { echo 'target="' . esc_attr($service_link['target']) . '"'; } ?>>
                                 <?php if ($background_image) { ?>
                                     <div class="home-services__wrapper-service-image">
